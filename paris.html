@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris - TravelGo</title>
+    <link rel="stylesheet" href="paris.css"> <!-- Link to your CSS file for styling -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Header content goes here -->
+    </header>
+
+    <!-- Paris Destination Content -->
+    <section class="destination-content">
+        <h1>Paris, France</h1>
+        <!-- You can add an image of Paris here -->
+
+        <!-- Information about Paris (to be fetched using JavaScript) -->
+        <div id="paris-info">
+            <!-- Data will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+
+    <!-- JavaScript to fetch data about Paris -->
+    <script>
+        // Fetch data about Paris from a source (e.g., Wikipedia)
+        fetch('https://en.wikipedia.org/wiki/Paris')
+            .then(response => response.text())
+            .then(data => {
+                // Extract and display relevant data
+                const parser = new DOMParser();
+                const htmlDoc = parser.parseFromString(data, 'text/html');
+                const parisInfo = htmlDoc.querySelector('.mw-parser-output'); // Adjust the selector as needed
+                document.getElementById('paris-info').innerHTML = parisInfo.innerHTML;
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    </script>
+</body>
+</html>

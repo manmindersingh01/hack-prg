@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelGo - Your Ultimate Travel Guide</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file for styling -->
+</head>
+<body>
+    <!-- Header Section -->
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">TravelGo</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to TravelGo</h1>
+        <p>Your Ultimate Travel Guide</p>
+        <a href="#" class="btn">Explore Destinations</a>
+    </section>
+
+    <!-- Featured Destinations Section -->
+    <section class="featured-destinations">
+        <h2>Featured Destinations</h2>
+        <!-- Featured destination cards go here -->
+        <div class="destination-card">
+            <img src="destination1.jpg" alt="Destination 1">
+            <h3>Paris, France</h3>
+            <p>Explore the City of Love</p>
+            <a href="paris.html">Learn More</a>
+        </div>
+        <div class="destination-card">
+            <img src="destination2.jpg" alt="Destination 2">
+            <h3>Tokyo, Japan</h3>
+            <p>Discover the Land of the Rising Sun</p>
+            <a href="#">Learn More</a>
+        </div>
+        <!-- Add more destination cards as needed -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-logo">
+            <a href="#">TravelGo</a>
+        </div>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+        <p>&copy; 2023 TravelGo. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelector('.btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const destinationSection = document.getElementById('destinations');
+            
+            window.scrollTo({
+                top: destinationSection.offsetTop - 50, // Adjust for header height
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    
+</body>
+</html>

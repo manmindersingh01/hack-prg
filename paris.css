@@ -1,0 +1,36 @@
+/* Import the styles from the main stylesheet (styles.css) */
+@import url('styles.css');
+
+/* Additional styles specific to the Paris destination page */
+body {
+    background-color: #f5f5f5; /* Background color similar to homepage */
+}
+
+/* Customize destination page content styles */
+.destination-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.destination-content h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Adjust the destination information container */
+#paris-info {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    /* You can add additional styling specific to the Paris page here */
+}
+
+/* Footer styles (same as homepage) */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
